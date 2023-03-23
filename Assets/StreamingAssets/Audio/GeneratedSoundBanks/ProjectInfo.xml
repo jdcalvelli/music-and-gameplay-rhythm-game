@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="music-and-gameplay-rhythm-game-wwise" GUID="{40B827CA-E34F-445B-9CD3-DF457264DCF0}" Generator="2022.1.2.8150"/>
+	<CacheRoot>../../../../music-and-gameplay-rhythm-game-wwise/.cache/</CacheRoot>
+	<Platforms>
+		<Platform Name="Linux" GUID="{F50EB9E8-CB49-40DD-B48C-6640BC028DFA}" BasePlatform="Linux" BasePlatformGUID="{BD0BDF13-3125-454F-8BFD-319537169F81}" Path="../../../../music-and-gameplay-rhythm-game-wwise/GeneratedSoundBanks/Linux/"/>
+		<Platform Name="Mac" GUID="{16ED2899-1C2B-46B9-B4D8-080AF7A32C30}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../music-and-gameplay-rhythm-game-wwise/GeneratedSoundBanks/Mac/"/>
+		<Platform Name="Windows" GUID="{E68E032E-0534-4283-B0B3-8C53C9D49873}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../music-and-gameplay-rhythm-game-wwise/GeneratedSoundBanks/Windows/"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{D358AC40-35AB-4B79-B644-FCAB0C01D020}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{AA7E0F0E-9EE4-2E66-7A2C-15C37BE54BAD}</FileHash>
+</ProjectInfo>

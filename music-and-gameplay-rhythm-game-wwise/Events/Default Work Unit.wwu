@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E4D06CE1-9758-4269-A55A-2AD45D3CF10E}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{E4D06CE1-9758-4269-A55A-2AD45D3CF10E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E4D06CE1-9758-4269-A55A-2AD45D3CF10E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PlayMadeon" ID="{25001ED1-39B1-4685-8883-A500FFB91961}">
+					<ChildrenList>
+						<Action Name="" ID="{71949C33-0299-4ED6-B664-8ED9A065B47B}" ShortID="555535848">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MadeonTestSong" ID="{561DE6C4-29F7-443D-ABA5-B829A0E9268D}" WorkUnitID="{33AC9C5F-8586-49F7-81E8-30571AB47105}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

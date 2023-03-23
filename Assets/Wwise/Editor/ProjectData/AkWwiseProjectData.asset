@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 57ecd36958067b429f3857042fade271
     GuidInternal: 
-    m_lastTime: -8585220706125044415
-    List: []
+    m_lastTime: -8585220659679717664
+    List:
+    - name: Main
+      guid: 2f97035775029c4299ee3c3697d55724
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 57ecd36958067b429f3857042fade271
+      - ElementName: Main
+        ObjectType: 7
+        guid: 2f97035775029c4299ee3c3697d55724
+      Path: SoundBanks/Default Work Unit/Main
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: e16cd0e458976942a55a2ad45d3cf10e
     GuidInternal: 
-    m_lastTime: -8585220706125117588
-    List: []
+    m_lastTime: -8585220660767935257
+    List:
+    - name: PlayMadeon
+      guid: d11e0025b13985468883a500ffb91961
+      id: 392151843
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e16cd0e458976942a55a2ad45d3cf10e
+      - ElementName: PlayMadeon
+        ObjectType: 3
+        guid: d11e0025b13985468883a500ffb91961
+      Path: Events/Default Work Unit/PlayMadeon
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +170,7 @@ MonoBehaviour:
     m_lastTime: -8585220706124867860
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0100000006000000070000003800000039000000490000006400000065000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

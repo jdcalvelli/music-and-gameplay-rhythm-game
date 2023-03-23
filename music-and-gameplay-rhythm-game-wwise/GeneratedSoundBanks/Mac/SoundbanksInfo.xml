@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../../</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F56A610C-C7C4-F874-B68B-7ADDF94EBB7A}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E6FBAD63-85AA-004E-25E7-E90EA4D0B8EB}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="202786404" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Madeon-Pay-No-Mind-_ft.-Passion-Pit_.wav</ShortName>
+					<CachePath>SFX/Madeon-Pay-No-Mind-_ft.-Passion-Pit__D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="392151843" Name="PlayMadeon" DurationType="OneShot" DurationMin="249.02242" DurationMax="249.02242">
+					<MediaRefs>
+						<MediaRef Id="202786404"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{B7236086-EDD1-E147-AF20-2429FC8AFB29}</FileHash>
+</SoundBanksInfo>

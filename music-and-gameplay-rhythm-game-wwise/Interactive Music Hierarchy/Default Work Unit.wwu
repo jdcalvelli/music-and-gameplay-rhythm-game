@@ -1,6 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{33AC9C5F-8586-49F7-81E8-30571AB47105}" SchemaVersion="110">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{33AC9C5F-8586-49F7-81E8-30571AB47105}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{33AC9C5F-8586-49F7-81E8-30571AB47105}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="MadeonTestSong" ID="{561DE6C4-29F7-443D-ABA5-B829A0E9268D}" ShortID="555260927">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="252601.227304901"/>
+						<Property Name="Tempo" Type="Real64" Value="112"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-20</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DABC8817-5D3A-45BC-8822-FAF2CCD6AEC2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DFFE989-AA29-4423-AA16-D615F27A2D75}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Madeon-Pay-No-Mind-_ft_-Passion-Pit_" ID="{16E13922-B398-41D7-80AA-443728097C8D}" ShortID="819452344">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DFFE989-AA29-4423-AA16-D615F27A2D75}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Madeon-Pay-No-Mind-_ft_-Passion-Pit_" ID="{E63B9D92-EB7F-4951-AF30-B1C92931BB60}">
+									<Language>SFX</Language>
+									<AudioFile>Madeon-Pay-No-Mind-_ft.-Passion-Pit_.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="202786404"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{60B37F2E-AA46-432D-9A7A-01349F4BBCE3}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists>
+								<ObjectList Name="Sequences">
+									<Reference>
+										<Local>
+											<MusicTrackSequence Name="" ID="{33EE751C-1715-4768-BACC-DF72BA1779AC}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<Reference>
+															<Local>
+																<MusicClip Name="Madeon-Pay-No-Mind-_ft_-Passion-Pit_" ID="{0C2896DC-D062-4733-90A5-90C816BA1FB5}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="249022.416666667"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Madeon-Pay-No-Mind-_ft_-Passion-Pit_" ID="{E63B9D92-EB7F-4951-AF30-B1C92931BB60}"/>
+																</MusicClip>
+															</Local>
+														</Reference>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicTrack>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Cues">
+							<Reference>
+								<Local>
+									<MusicCue Name="Entry Cue" ID="{4661171B-4A7C-4AB3-A521-3CA941BA1D15}"/>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="Exit Cue" ID="{BEE350FB-409E-4B54-A832-AC8F2CF63A87}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="248571.428571429"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="TestCue" ID="{F45AB948-ED77-41D1-BEF0-39DCC8CD05D3}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="2"/>
+											<Property Name="TimeMs" Type="Real64" Value="2142.85714285714"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSegment>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
