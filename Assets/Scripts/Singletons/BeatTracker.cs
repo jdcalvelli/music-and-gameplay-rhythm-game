@@ -3,25 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeatTracker : MonoBehaviour, IOnBeatEvent
+public class BeatTracker : Singleton<BeatTracker>, IOnBeatEvent
 {
     // singleton insurance, private set
-    public static BeatTracker Instance { get; private set; }
+    //public static BeatTracker Instance { get; private set; }
 
     private int _beatValue;
-    
-    private void Awake()
-    {
-        // singleton insurance
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
 
     private void Start()
     {

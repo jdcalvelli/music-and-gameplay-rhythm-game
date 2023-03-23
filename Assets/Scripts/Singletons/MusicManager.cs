@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicManager : MonoBehaviour
+public class MusicManager : Singleton<MusicManager>
 {
     // singleton insurance, private set
-    public static MusicManager Instance { get; private set; }
+    //public static MusicManager Instance { get; private set; }
 
     // wwise related info
     [SerializeField] private AK.Wwise.Bank soundBank;
@@ -24,18 +24,10 @@ public class MusicManager : MonoBehaviour
     public event EventHandler OnBeat;
     public event EventHandler OnBar;
 
-    private void Awake()
+    public override void Awake()
     {
-        // singleton insurance
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
-        
+        // run Singleton awake first
+        base.Awake();
         // load wwise soundbank
         soundBank.Load();
     }
