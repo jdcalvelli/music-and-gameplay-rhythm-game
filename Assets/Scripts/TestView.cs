@@ -8,8 +8,8 @@ public class TestView : MonoBehaviour
     // punch on beat
     public void PunchOnBeat()
     {
-        gameObject.transform.DOPunchScale(
-            new Vector3(0.2f, 0.2f, 0f),
+        gameObject.transform.DOPunchPosition(
+            new Vector3(0.2f, 0.2f, 0.2f),
             MusicManager.Instance.beatDuration)
             .SetEase(Ease.InOutSine);
     }
@@ -30,5 +30,24 @@ public class TestView : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().DOColor(
             new Color(0.3f, 0.4f, 0.8f), 
             MusicManager.Instance.beatDuration);
+    }
+
+    public void SquashOnSpecificBeat(int specificBeat)
+    {
+        if (specificBeat is 1 or 3)
+        {
+            gameObject.transform.DOScale(
+                new Vector3(1f, 2f, 2f),
+                MusicManager.Instance.beatDuration
+            );
+        }
+        else
+        {
+            gameObject.transform.DOScale(
+                new Vector3(2f, 2f, 2f),
+                MusicManager.Instance.beatDuration
+            );
+        }
+
     }
 }
