@@ -19,19 +19,19 @@ public class TestController : MonoBehaviour, IOnBeatEvent, IOnBarEvent, IOnCueEv
 
     public void OnBeatEvent(object sender, EventArgs e)
     {
-        Debug.Log("on beat");
+        //Debug.Log("on beat");
         testView.PunchOnBeat();
     }
 
     public void OnBarEvent(object sender, EventArgs e)
     {
-        Debug.Log("on bar");
+        //Debug.Log("on bar");
         testView.RotateOnBar();
     }
 
     public void OnCueEvent(object sender, EventArgs e)
     {
-        Debug.Log("on cue");
+        //Debug.Log("on cue");
         testView.ColorChangeOnCue();
     }
 }

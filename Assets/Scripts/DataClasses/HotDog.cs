@@ -6,7 +6,7 @@ using UnityEngine;
 public class HotDog
 {
     // we need to track whether it has the condiments
-    private Dictionary<string, bool> CondimentList = new Dictionary<string, bool>()
+    private Dictionary<string, bool> _condimentList = new Dictionary<string, bool>()
     {
         {"Ketchup", false},
         {"Mustard", false},
@@ -15,13 +15,13 @@ public class HotDog
     };
     
     // add condiment
-    public void addCondiment(string condiment)
+    public void AddCondiment(string condiment)
     {
-        CondimentList[condiment] = true;
+        _condimentList[condiment] = true;
     }
 
-    public Dictionary<string, bool> getCondiments()
+    public Dictionary<string, bool> GetCondiments()
     {
-        return CondimentList;
+        return _condimentList;
     }
 }

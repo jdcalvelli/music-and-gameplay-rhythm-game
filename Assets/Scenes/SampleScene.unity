@@ -500,14 +500,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6688005168096721588, guid: 3ef74c95b6d854f929f318f0740e6647, type: 3}
-      propertyPath: soundBank.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 9f3232f303cc7407a817b0aeacaa8480, type: 2}
-    - target: {fileID: 6688005168096721588, guid: 3ef74c95b6d854f929f318f0740e6647, type: 3}
-      propertyPath: musicEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 29e45d7d7fa8547d5b7d8a95e5632f0f, type: 2}
+    - target: {fileID: 1495256767, guid: 3ef74c95b6d854f929f318f0740e6647, type: 3}
+      propertyPath: BeatValue
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6688005168096721590, guid: 3ef74c95b6d854f929f318f0740e6647, type: 3}
       propertyPath: m_Name
       value: MusicManager

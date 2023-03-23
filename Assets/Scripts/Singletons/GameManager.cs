@@ -28,12 +28,18 @@ public class GameManager : MonoBehaviour
     {
         // instantiate a hot dog for testing
         _currentHotDog = new HotDog();
-        _currentHotDog.addCondiment("Ketchup");
-        _currentHotDog.addCondiment("Relish");
+        _currentHotDog.AddCondiment("Ketchup");
+        _currentHotDog.AddCondiment("Relish");
 
-        foreach (var condiment in _currentHotDog.getCondiments())
+        // showing condiments
+        foreach (var condiment in _currentHotDog.GetCondiments())
         {
             Debug.Log(condiment);
         }
+    }
+
+    private void Update()
+    {
+        Debug.Log(BeatTracker.Instance.GetBeatValue());
     }
 }
