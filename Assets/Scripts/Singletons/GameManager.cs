@@ -6,22 +6,8 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
 
-    // holder for hot dog
-    private HotDog _currentHotDog;
-
-    private void Start()
-    {
-        // instantiate a hot dog for testing
-        _currentHotDog = new HotDog();
-        _currentHotDog.AddCondiment("Ketchup");
-        _currentHotDog.AddCondiment("Relish");
-
-        // showing condiments
-        foreach (var condiment in _currentHotDog.GetCondiments())
-        {
-            Debug.Log(condiment);
-        }
-    }
+    // this is going to have to be set dynamially somehow
+    public HotDogController CurrentHotDog;
 
     private void Update()
     {
