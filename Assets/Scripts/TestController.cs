@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestController : MonoBehaviour, IOnBeatEvent, IOnBarEvent, IOnCueEvent
+public class TestController : MonoBehaviour, IOnBeatEvent, IOnBarEvent, IOnCueEvent, IOnKey_QEvent
 {
 
     [SerializeField] private TestView testView;
@@ -14,6 +14,9 @@ public class TestController : MonoBehaviour, IOnBeatEvent, IOnBarEvent, IOnCueEv
         MusicManager.Instance.OnBeat += OnBeatEvent;
         MusicManager.Instance.OnBar += OnBarEvent;
         MusicManager.Instance.OnCue += OnCueEvent;
+        
+        // subscribe to input events
+        InputManager.Instance.OnKey_Q += OnKey_QEvent;
     }
     
 
@@ -34,5 +37,10 @@ public class TestController : MonoBehaviour, IOnBeatEvent, IOnBarEvent, IOnCueEv
     {
         //Debug.Log("on cue");
         testView.ColorChangeOnCue();
+    }
+
+    public void OnKey_QEvent(object sender, EventArgs e)
+    {
+        Debug.Log("q button pressed");
     }
 }
