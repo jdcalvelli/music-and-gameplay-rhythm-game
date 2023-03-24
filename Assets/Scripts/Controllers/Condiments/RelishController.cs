@@ -15,7 +15,17 @@ public class RelishController : CondimentController, IOnKey_OEvent
 
     public void OnKey_OEvent(object sender, EventArgs e)
     {
-        relishView.SqueezeBottle();
-        AddCondiment("Relish");
+        // need to check if on beat in general and on the right beat specifically
+        if (UsedOnBeat() && BeatTracker.Instance.BeatValue == 3)
+        {
+            //Debug.Log("-- on beat --");
+            relishView.SqueezeBottle();
+            AddCondiment("Relish");
+        }
+        else
+        {
+            //Debug.Log("-- not on beat --");
+            relishView.ShakeBottle();
+        }
     }
 }

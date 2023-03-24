@@ -15,7 +15,17 @@ public class BeansController : CondimentController, IOnKey_PEvent
 
     public void OnKey_PEvent(object sender, EventArgs e)
     {
-        beansView.SqueezeBottle();
-        AddCondiment("Beans");
+        // need to check if on beat in general and on the right beat specifically
+        if (UsedOnBeat() && BeatTracker.Instance.BeatValue == 4)
+        {
+            //Debug.Log("-- on beat --");
+            beansView.SqueezeBottle();
+            AddCondiment("Relish");
+        }
+        else
+        {
+            //Debug.Log("-- not on beat --");
+            beansView.ShakeBottle();
+        }
     }
 }

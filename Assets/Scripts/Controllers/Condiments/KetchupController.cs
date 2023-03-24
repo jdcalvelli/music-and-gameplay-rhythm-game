@@ -15,16 +15,17 @@ public class KetchupController : CondimentController, IOnKey_QEvent
 
     public void OnKey_QEvent(object sender, EventArgs e)
     {
-        //ketchupView.SqueezeBottle();
-        //AddCondiment("Ketchup");
-
-        if (UsedOnBeat())
+        // need to check if on beat in general and on the right beat specifically
+        if (UsedOnBeat() && BeatTracker.Instance.BeatValue == 1)
         {
-            Debug.Log("-- on beat --");
+            //Debug.Log("-- on beat --");
+            ketchupView.SqueezeBottle();
+            AddCondiment("Ketchup");
         }
         else
         {
-            Debug.Log("-- not on beat --");
+            //Debug.Log("-- not on beat --");
+            ketchupView.ShakeBottle();
         }
     }
 }

@@ -15,7 +15,17 @@ public class MustardController : CondimentController, IOnKey_WEvent
 
     public void OnKey_WEvent(object sender, EventArgs e)
     {
-        mustardView.SqueezeBottle();
-        AddCondiment("Mustard");
+        // need to check if on beat in general and on the right beat specifically
+        if (UsedOnBeat() && BeatTracker.Instance.BeatValue == 2)
+        {
+            //Debug.Log("-- on beat --");
+            mustardView.SqueezeBottle();
+            AddCondiment("Mustard");
+        }
+        else
+        {
+            //Debug.Log("-- not on beat --");
+            mustardView.ShakeBottle();
+        }
     }
 }
