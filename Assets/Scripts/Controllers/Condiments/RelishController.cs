@@ -20,7 +20,7 @@ public class RelishController : CondimentController, IOnKey_OEvent
         {
             //Debug.Log("-- on beat --");
             relishView.SqueezeBottle();
-            AddCondiment("Relish");
+            GameManager.Instance.CurrentHotDog.AddCondiment("Relish");
         }
         else
         {

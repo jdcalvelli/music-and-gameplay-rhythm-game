@@ -31,4 +31,12 @@ public class HotDogController : MonoBehaviour, IOnBeatEvent, IOnBarEvent
         //    Debug.Log(condiment);
         //}
     }
+    
+    public void AddCondiment(string condimentName)
+    {
+        // update the model
+        GameManager.Instance.CurrentHotDog._hotDog.CondimentList[condimentName] = true;
+        // update the condiment view
+        hotDogView.ShowGlizzyCondiment(condimentName);
+    }
 }

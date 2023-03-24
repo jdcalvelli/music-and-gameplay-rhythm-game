@@ -20,7 +20,7 @@ public class KetchupController : CondimentController, IOnKey_QEvent
         {
             //Debug.Log("-- on beat --");
             ketchupView.SqueezeBottle();
-            AddCondiment("Ketchup");
+            GameManager.Instance.CurrentHotDog.AddCondiment("Ketchup");
         }
         else
         {

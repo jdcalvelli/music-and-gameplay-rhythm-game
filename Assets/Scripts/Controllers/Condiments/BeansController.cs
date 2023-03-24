@@ -20,7 +20,7 @@ public class BeansController : CondimentController, IOnKey_PEvent
         {
             //Debug.Log("-- on beat --");
             beansView.SqueezeBottle();
-            AddCondiment("Relish");
+            GameManager.Instance.CurrentHotDog.AddCondiment("Beans");
         }
         else
         {

@@ -20,7 +20,7 @@ public class MustardController : CondimentController, IOnKey_WEvent
         {
             //Debug.Log("-- on beat --");
             mustardView.SqueezeBottle();
-            AddCondiment("Mustard");
+            GameManager.Instance.CurrentHotDog.AddCondiment("Mustard");
         }
         else
         {
