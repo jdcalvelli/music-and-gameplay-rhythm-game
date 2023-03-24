@@ -44,23 +44,24 @@ public class BeatTracker : Singleton<BeatTracker>, IOnBeatEvent, IOnCueEvent
         NextBeatTime = BeatTime + MusicManager.Instance.NormalizedBeatDuration;
     }
 
-    public void OnCueEvent(object sender, EventArgs e)
+    public void OnCueEvent(object sender, MusicManager.CueEventArgs e)
     {
         // quick and dirty for now
         // first cue save time into twindowstart
-        if (_tWindowStart == 0)
-        {
-            _tWindowStart = MusicManager.Instance.NormalizedCurrentPlaybackTime;
-        }
-        else
-        {
-            // second cue save time into twindowend and set twindow
-            _tWindowEnd = MusicManager.Instance.NormalizedCurrentPlaybackTime;
-            // applied on either side of the beat in question
-            TWindow = (_tWindowEnd - _tWindowStart) / 2;
 
+        switch (e.CueName)
+        {
+            case "TWindowStart":
+                _tWindowStart = MusicManager.Instance.NormalizedCurrentPlaybackTime;
+                break;
+            case "TWindowEnd":
+                // second cue save time into twindowend and set twindow
+                _tWindowEnd = MusicManager.Instance.NormalizedCurrentPlaybackTime;
+                // applied on either side of the beat in question
+                TWindow = (_tWindowEnd - _tWindowStart) / 2;
+                break;
         }
-        
+
         //Debug.Log("twindow start " + _tWindowStart);
         //Debug.Log("twindow end " + _tWindowEnd);
         //Debug.Log("twindow " + TWindow);

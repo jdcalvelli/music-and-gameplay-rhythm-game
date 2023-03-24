@@ -73,6 +73,30 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicTrack>
+						<MusicTrack Name="InstantiateGlizzy" ID="{D49FC3AA-F5CF-4B5C-BCB0-BF7DB4BA85B5}" ShortID="1042372037">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DFFE989-AA29-4423-AA16-D615F27A2D75}"/>
+								</Reference>
+							</ReferenceList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{3E337EFA-E04E-4441-A689-84E5D07E575D}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists>
+								<ObjectList Name="Sequences">
+									<Reference>
+										<Local>
+											<MusicTrackSequence Name="" ID="{A8062108-D9C4-403C-9403-44DF96F3C30C}"/>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicTrack>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="Cues">
@@ -96,7 +120,7 @@
 									<MusicCue Name="TWindowStart" ID="{F45AB948-ED77-41D1-BEF0-39DCC8CD05D3}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="2"/>
-											<Property Name="TimeMs" Type="Real64" Value="1339.28571428571"/>
+											<Property Name="TimeMs" Type="Real64" Value="401.785714285714"/>
 										</PropertyList>
 									</MusicCue>
 								</Local>
@@ -106,7 +130,27 @@
 									<MusicCue Name="TWindowEnd" ID="{154EF671-A42D-4FA8-B830-62E48C556ACB}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="2"/>
-											<Property Name="TimeMs" Type="Real64" Value="1875"/>
+											<Property Name="TimeMs" Type="Real64" Value="669.642857142857"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="InstantiateGlizzy" ID="{0ADA2363-3EBB-49C6-BD32-ED3D6582A56C}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="2"/>
+											<Property Name="TimeMs" Type="Real64" Value="1607.14285714286"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="DeinstantiateLastGlizzy" ID="{E12850BF-1113-467C-B1B7-E550229D2E63}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="2"/>
+											<Property Name="TimeMs" Type="Real64" Value="4285.71428571429"/>
 										</PropertyList>
 									</MusicCue>
 								</Local>

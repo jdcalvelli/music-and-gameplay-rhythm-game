@@ -28,7 +28,7 @@ public class MusicManager : Singleton<MusicManager>
     public int NormalizedCurrentPlaybackTime { get; private set; }
 
     // events for subscription, observer pattern
-    public event EventHandler OnCue;
+    public event EventHandler<CueEventArgs> OnCue;
     public event EventHandler OnBeat;
     public event EventHandler OnBar;
 
@@ -74,7 +74,9 @@ public class MusicManager : Singleton<MusicManager>
             switch (type)
             {
                 case AkCallbackType.AK_MusicSyncUserCue:
-                    OnCue?.Invoke(this, EventArgs.Empty);
+                    CueEventArgs cueEventArgs = new CueEventArgs();
+                    cueEventArgs.CueName = musicInfo.userCueName;
+                    OnCue?.Invoke(this, cueEventArgs);
                     break;
                 case AkCallbackType.AK_MusicSyncBeat:
                     OnBeat?.Invoke(this, EventArgs.Empty);
@@ -97,5 +99,11 @@ public class MusicManager : Singleton<MusicManager>
         AkSegmentInfo segmentInfo = new AkSegmentInfo();
         AkSoundEngine.GetPlayingSegmentInfo(_playingID, segmentInfo, true);
         return segmentInfo.iCurrentPosition;
+    }
+
+    // for pass through the cue name through events
+    public class CueEventArgs : EventArgs
+    {
+        public string CueName { get; set; }
     }
 }

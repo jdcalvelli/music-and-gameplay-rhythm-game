@@ -1,4 +1,4 @@
 public interface IOnCueEvent
 {
-    void OnCueEvent(object sender, System.EventArgs e);
+    void OnCueEvent(object sender, MusicManager.CueEventArgs e);
 }
