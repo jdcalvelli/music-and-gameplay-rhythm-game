@@ -24,7 +24,7 @@ public class TestController : MonoBehaviour, IOnBeatEvent, IOnBarEvent, IOnCueEv
     {
         //Debug.Log("on beat");
         testView.PunchOnBeat();
-        testView.SquashOnSpecificBeat(BeatTracker.Instance.GetBeatValue());
+        testView.SquashOnSpecificBeat(BeatTracker.Instance.BeatValue);
     }
 
     public void OnBarEvent(object sender, EventArgs e)

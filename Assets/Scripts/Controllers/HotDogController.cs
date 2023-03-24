@@ -20,7 +20,7 @@ public class HotDogController : MonoBehaviour, IOnBeatEvent, IOnBarEvent
     public void OnBeatEvent(object sender, EventArgs e)
     {
         // call view code to move the glizzy
-        hotDogView.MoveGlizzy(BeatTracker.Instance.GetBeatValue());
+        hotDogView.MoveGlizzy(BeatTracker.Instance.BeatValue);
     }
 
     public void OnBarEvent(object sender, EventArgs e)

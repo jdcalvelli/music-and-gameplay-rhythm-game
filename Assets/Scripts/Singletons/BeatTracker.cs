@@ -8,7 +8,7 @@ public class BeatTracker : Singleton<BeatTracker>, IOnBeatEvent
     // singleton insurance, private set
     //public static BeatTracker Instance { get; private set; }
 
-    private int _beatValue;
+    public int BeatValue { get; private set; }
 
     private void Start()
     {
@@ -16,25 +16,19 @@ public class BeatTracker : Singleton<BeatTracker>, IOnBeatEvent
         MusicManager.Instance.OnBeat += OnBeatEvent;
         
         // initialize beatvalue to 0
-        _beatValue = 0;
+        BeatValue = 0;
     }
 
     public void OnBeatEvent(object sender, EventArgs e)
     {
         // track which beat we are on (1 to 4)
-        if (_beatValue % 4 == 0)
+        if (BeatValue % 4 == 0)
         {
-            _beatValue = 1;
+            BeatValue = 1;
         }
         else
         {
-            _beatValue++;
+            BeatValue++;
         }
-    }
-
-    // getter
-    public int GetBeatValue()
-    {
-        return _beatValue;
     }
 }

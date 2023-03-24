@@ -11,6 +11,6 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        Debug.Log(BeatTracker.Instance.GetBeatValue());
+        Debug.Log(BeatTracker.Instance.BeatValue);
     }
 }
