@@ -10,16 +10,16 @@ public class HotDogView : MonoBehaviour
         switch (beatValue)
         {
             case 1:
-                gameObject.transform.DOMoveX(-2, MusicManager.Instance.beatDuration);
+                gameObject.transform.DOMoveX(-2, MusicManager.Instance.BeatDuration);
                 break;
             case 2:
-                gameObject.transform.DOMoveX(2, MusicManager.Instance.beatDuration);
+                gameObject.transform.DOMoveX(2, MusicManager.Instance.BeatDuration);
                 break;
             case 3:
-                gameObject.transform.DOMoveX(6, MusicManager.Instance.beatDuration);
+                gameObject.transform.DOMoveX(6, MusicManager.Instance.BeatDuration);
                 break;
             case 4:
-                gameObject.transform.DOMoveX(-6, MusicManager.Instance.beatDuration);
+                gameObject.transform.DOMoveX(-6, MusicManager.Instance.BeatDuration);
                 break;
         }
     }

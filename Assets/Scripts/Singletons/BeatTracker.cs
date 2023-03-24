@@ -9,6 +9,8 @@ public class BeatTracker : Singleton<BeatTracker>, IOnBeatEvent
     //public static BeatTracker Instance { get; private set; }
 
     public int BeatValue { get; private set; }
+    public int BeatTime { get; private set; }
+    public int NextBeatTime { get; private set; }
 
     private void Start()
     {
@@ -30,5 +32,9 @@ public class BeatTracker : Singleton<BeatTracker>, IOnBeatEvent
         {
             BeatValue++;
         }
+        
+        // set beat values
+        BeatTime = MusicManager.Instance.NormalizedCurrentPlaybackTime;
+        NextBeatTime = BeatTime + MusicManager.Instance.NormalizedBeatDuration;
     }
 }

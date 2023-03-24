@@ -11,7 +11,7 @@ public class CondimentView : MonoBehaviour
     public void SqueezeBottle()
     {
         DOTween.Sequence()
-            .Append(gameObject.transform.DOScaleX(0.7f, MusicManager.Instance.beatDuration / 2))
-            .Append(gameObject.transform.DOScaleX(1f, MusicManager.Instance.beatDuration / 2));
+            .Append(gameObject.transform.DOScaleX(0.7f, MusicManager.Instance.BeatDuration / 2))
+            .Append(gameObject.transform.DOScaleX(1f, MusicManager.Instance.BeatDuration / 2));
     }
 }

@@ -15,9 +15,16 @@ public class MusicManager : Singleton<MusicManager>
     // result of wwise event posting
     private uint _playingID;
 
+    // normalization factor
+    public int NormalizationFactor = 1000;
+    
     // beat/bar duration info for reference
-    public float beatDuration { get; private set; }
-    public float barDuration { get; private set; }
+    public float BeatDuration { get; private set; }
+    public float BarDuration { get; private set; }
+    public int CurrentPlaybackTime { get; private set; }
+    public int NormalizedBeatDuration { get; private set; }
+    public int NormalizedBarDuration { get; private set; }
+    public int NormalizedCurrentPlaybackTime { get; private set; }
 
     // events for subscription, observer pattern
     public event EventHandler OnCue;
@@ -54,8 +61,15 @@ public class MusicManager : Singleton<MusicManager>
             // cast info to necessary type
             musicInfo = (AkMusicSyncCallbackInfo)info;
             // derive durations from cast musicInfo
-            beatDuration = musicInfo.segmentInfo_fBeatDuration;
-            barDuration = musicInfo.segmentInfo_fBarDuration;
+            // making it times 1000 so that we can actually register that there is a difference lmao
+            BeatDuration = musicInfo.segmentInfo_fBeatDuration;
+            BarDuration = musicInfo.segmentInfo_fBarDuration;
+            CurrentPlaybackTime = musicInfo.segmentInfo_iCurrentPosition;
+            
+            // normalized beat duration time for inputs and such
+            NormalizedBeatDuration = (int)(BeatDuration * NormalizationFactor);
+            NormalizedBarDuration = (int)(BarDuration * NormalizationFactor);
+            NormalizedCurrentPlaybackTime = CurrentPlaybackTime * NormalizationFactor;
 
             // invoke correct event based on type passed from wwise to callback
             switch (type)

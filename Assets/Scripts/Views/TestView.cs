@@ -10,7 +10,7 @@ public class TestView : MonoBehaviour
     {
         gameObject.transform.DOPunchPosition(
             new Vector3(0.2f, 0.2f, 0.2f),
-            MusicManager.Instance.beatDuration)
+            MusicManager.Instance.BeatDuration)
             .SetEase(Ease.InOutSine);
     }
 
@@ -19,7 +19,7 @@ public class TestView : MonoBehaviour
     {
         gameObject.transform.DORotate(
             new Vector3(0f, 0f, 90f), 
-            MusicManager.Instance.beatDuration, 
+            MusicManager.Instance.BeatDuration, 
             RotateMode.WorldAxisAdd)
             .SetEase(Ease.InOutCubic);
     }
@@ -29,7 +29,7 @@ public class TestView : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().DOColor(
             new Color(0.3f, 0.4f, 0.8f), 
-            MusicManager.Instance.beatDuration);
+            MusicManager.Instance.BeatDuration);
     }
 
     public void SquashOnSpecificBeat(int specificBeat)
@@ -38,14 +38,14 @@ public class TestView : MonoBehaviour
         {
             gameObject.transform.DOScale(
                 new Vector3(1f, 2f, 2f),
-                MusicManager.Instance.beatDuration
+                MusicManager.Instance.BeatDuration
             );
         }
         else
         {
             gameObject.transform.DOScale(
                 new Vector3(2f, 2f, 2f),
-                MusicManager.Instance.beatDuration
+                MusicManager.Instance.BeatDuration
             );
         }
 
