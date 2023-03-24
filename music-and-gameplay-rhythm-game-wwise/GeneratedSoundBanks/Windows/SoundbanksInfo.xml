@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E6FBAD63-85AA-004E-25E7-E90EA4D0B8EB}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5DF67A09-2318-7647-0880-218079ACEC08}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -32,7 +32,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="392151843" Name="PlayMadeon" DurationType="OneShot" DurationMin="249.02242" DurationMax="249.02242">
+				<Event Id="392151843" Name="PlayMadeon" DurationType="OneShot" DurationMin="251.16528" DurationMax="251.16528">
 					<MediaRefs>
 						<MediaRef Id="202786404"/>
 					</MediaRefs>
@@ -40,5 +40,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CE083E46-5068-E87F-1D3E-65E843EC5545}</FileHash>
+	<FileHash>{E0D41129-140B-1649-1CA2-98782CBB570F}</FileHash>
 </SoundBanksInfo>

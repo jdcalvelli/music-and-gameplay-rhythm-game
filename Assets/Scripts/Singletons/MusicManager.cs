@@ -22,6 +22,7 @@ public class MusicManager : Singleton<MusicManager>
     public float BeatDuration { get; private set; }
     public float BarDuration { get; private set; }
     public int CurrentPlaybackTime { get; private set; }
+    // normalized
     public int NormalizedBeatDuration { get; private set; }
     public int NormalizedBarDuration { get; private set; }
     public int NormalizedCurrentPlaybackTime { get; private set; }

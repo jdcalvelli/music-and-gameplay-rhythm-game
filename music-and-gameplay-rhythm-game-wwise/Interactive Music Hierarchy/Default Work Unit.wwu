@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<MusicSegment Name="MadeonTestSong" ID="{561DE6C4-29F7-443D-ABA5-B829A0E9268D}" ShortID="555260927">
 					<PropertyList>
-						<Property Name="EndPosition" Type="Real64" Value="252601.227304901"/>
+						<Property Name="EndPosition" Type="Real64" Value="253092.828107998"/>
 						<Property Name="Tempo" Type="Real64" Value="112"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -59,6 +59,7 @@
 																		<Property Name="EndTrimOffset" Type="Real64" Value="249022.416666667"/>
 																		<Property Name="FadeInMode" Type="int16" Value="0"/>
 																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="2142.85714285714"/>
 																	</PropertyList>
 																	<AudioSourceRef Name="Madeon-Pay-No-Mind-_ft_-Passion-Pit_" ID="{E63B9D92-EB7F-4951-AF30-B1C92931BB60}"/>
 																</MusicClip>
@@ -85,17 +86,27 @@
 									<MusicCue Name="Exit Cue" ID="{BEE350FB-409E-4B54-A832-AC8F2CF63A87}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="248571.428571429"/>
+											<Property Name="TimeMs" Type="Real64" Value="250714.285714286"/>
 										</PropertyList>
 									</MusicCue>
 								</Local>
 							</Reference>
 							<Reference>
 								<Local>
-									<MusicCue Name="TestCue" ID="{F45AB948-ED77-41D1-BEF0-39DCC8CD05D3}">
+									<MusicCue Name="TWindowStart" ID="{F45AB948-ED77-41D1-BEF0-39DCC8CD05D3}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="2"/>
-											<Property Name="TimeMs" Type="Real64" Value="2142.85714285714"/>
+											<Property Name="TimeMs" Type="Real64" Value="2008.92857142857"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="TWindowEnd" ID="{154EF671-A42D-4FA8-B830-62E48C556ACB}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="2"/>
+											<Property Name="TimeMs" Type="Real64" Value="2276.78571428571"/>
 										</PropertyList>
 									</MusicCue>
 								</Local>

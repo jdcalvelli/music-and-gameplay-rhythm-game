@@ -11,4 +11,6 @@ public abstract class CondimentController : MonoBehaviour
     {
         GameManager.Instance.CurrentHotDog._hotDog.CondimentList[condimentName] = true;
     }
+    
+    
 }
