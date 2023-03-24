@@ -39,4 +39,11 @@ public class HotDogController : MonoBehaviour, IOnBeatEvent, IOnBarEvent
         // update the condiment view
         hotDogView.ShowGlizzyCondiment(condimentName);
     }
+
+    private void OnDestroy()
+    {
+        // remove listeners
+        MusicManager.Instance.OnBeat -= OnBeatEvent;
+        MusicManager.Instance.OnBar -= OnBarEvent;
+    }
 }

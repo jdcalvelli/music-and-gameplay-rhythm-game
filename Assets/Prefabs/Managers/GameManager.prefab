@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2ba3428126b44dd87476b563856884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotDogPrefab: {fileID: 6170022576132046543, guid: d2116c6e36dc14f83a6e11622ada3858, type: 3}
+  CurrentHotDog: {fileID: 0}
