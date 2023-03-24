@@ -15,7 +15,16 @@ public class KetchupController : CondimentController, IOnKey_QEvent
 
     public void OnKey_QEvent(object sender, EventArgs e)
     {
-        ketchupView.SqueezeBottle();
-        AddCondiment("Ketchup");
+        //ketchupView.SqueezeBottle();
+        //AddCondiment("Ketchup");
+
+        if (UsedOnBeat())
+        {
+            Debug.Log("-- on beat --");
+        }
+        else
+        {
+            Debug.Log("-- not on beat --");
+        }
     }
 }

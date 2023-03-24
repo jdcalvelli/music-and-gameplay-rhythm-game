@@ -61,8 +61,8 @@ public class BeatTracker : Singleton<BeatTracker>, IOnBeatEvent, IOnCueEvent
 
         }
         
-        Debug.Log("twindow start " + _tWindowStart);
-        Debug.Log("twindow end " + _tWindowEnd);
-        Debug.Log("twindow " + TWindow);
+        //Debug.Log("twindow start " + _tWindowStart);
+        //Debug.Log("twindow end " + _tWindowEnd);
+        //Debug.Log("twindow " + TWindow);
     }
 }

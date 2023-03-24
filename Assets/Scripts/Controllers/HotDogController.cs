@@ -26,9 +26,9 @@ public class HotDogController : MonoBehaviour, IOnBeatEvent, IOnBarEvent
     public void OnBarEvent(object sender, EventArgs e)
     {
         // just print out the hot dog condiment status
-        foreach (var condiment in _hotDog.CondimentList)
-        {
-            Debug.Log(condiment);
-        }
+        //foreach (var condiment in _hotDog.CondimentList)
+        //{
+        //    Debug.Log(condiment);
+        //}
     }
 }

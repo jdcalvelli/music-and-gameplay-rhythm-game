@@ -65,12 +65,10 @@ public class MusicManager : Singleton<MusicManager>
             // making it times 1000 so that we can actually register that there is a difference lmao
             BeatDuration = musicInfo.segmentInfo_fBeatDuration;
             BarDuration = musicInfo.segmentInfo_fBarDuration;
-            CurrentPlaybackTime = musicInfo.segmentInfo_iCurrentPosition;
-            
+
             // normalized beat duration time for inputs and such
             NormalizedBeatDuration = (int)(BeatDuration * NormalizationFactor);
             NormalizedBarDuration = (int)(BarDuration * NormalizationFactor);
-            NormalizedCurrentPlaybackTime = CurrentPlaybackTime * NormalizationFactor;
 
             // invoke correct event based on type passed from wwise to callback
             switch (type)
@@ -87,5 +85,17 @@ public class MusicManager : Singleton<MusicManager>
                 
             }
         }
+    }
+
+    private void Update()
+    {
+        CurrentPlaybackTime = GetMusicTimeInMS();
+        NormalizedCurrentPlaybackTime = CurrentPlaybackTime * NormalizationFactor;
+    }
+    
+    public int GetMusicTimeInMS() {
+        AkSegmentInfo segmentInfo = new AkSegmentInfo();
+        AkSoundEngine.GetPlayingSegmentInfo(_playingID, segmentInfo, true);
+        return segmentInfo.iCurrentPosition;
     }
 }
