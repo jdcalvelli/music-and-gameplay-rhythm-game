@@ -16,8 +16,8 @@ public abstract class CondimentController : MonoBehaviour
         //Debug.Log("late window " + (BeatTracker.Instance.NextBeatTime + BeatTracker.Instance.TWindow));
         
         // if input is within next beat plus minus tolerance window
-        if (inputTime >= BeatTracker.Instance.BeatTime - BeatTracker.Instance.TWindow 
-            && inputTime <= BeatTracker.Instance.BeatTime + BeatTracker.Instance.TWindow)
+        if (inputTime >= BeatTracker.Instance.NextBeatTime - BeatTracker.Instance.TWindow 
+            && inputTime <= BeatTracker.Instance.NextBeatTime + BeatTracker.Instance.TWindow)
         {
             return true;
         }

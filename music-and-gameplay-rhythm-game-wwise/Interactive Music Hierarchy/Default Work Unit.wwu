@@ -120,7 +120,7 @@
 									<MusicCue Name="TWindowStart" ID="{F45AB948-ED77-41D1-BEF0-39DCC8CD05D3}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="2"/>
-											<Property Name="TimeMs" Type="Real64" Value="401.785714285714"/>
+											<Property Name="TimeMs" Type="Real64" Value="267.857142857143"/>
 										</PropertyList>
 									</MusicCue>
 								</Local>
@@ -130,7 +130,7 @@
 									<MusicCue Name="TWindowEnd" ID="{154EF671-A42D-4FA8-B830-62E48C556ACB}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="2"/>
-											<Property Name="TimeMs" Type="Real64" Value="669.642857142857"/>
+											<Property Name="TimeMs" Type="Real64" Value="803.571428571429"/>
 										</PropertyList>
 									</MusicCue>
 								</Local>
