@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MustardController : CondimentController, IOnKey_WEvent
+public class MustardController : CondimentController, IOnKey_WEvent, IOnBarEvent
 {
 
     [SerializeField] private CondimentView mustardView;
@@ -11,6 +11,7 @@ public class MustardController : CondimentController, IOnKey_WEvent
     private void Start()
     {
         InputManager.Instance.OnKey_W += OnKey_WEvent;
+        MusicManager.Instance.OnBar += OnBarEvent;
     }
 
     public void OnKey_WEvent(object sender, EventArgs e)
@@ -26,6 +27,21 @@ public class MustardController : CondimentController, IOnKey_WEvent
         {
             //Debug.Log("-- not on beat --");
             mustardView.ShakeBottle();
+        }
+    }
+    
+    // on bar event can be moved into parent class perhaps
+    public void OnBarEvent(object sender, EventArgs e)
+    {
+        if (GameManager.Instance.CurrentHotDog.OrderModel.CondimentList["Mustard"])
+        {
+            // set color to green in view
+            mustardView.ChangeColor(Color.green);
+        }
+        else
+        {
+            //set color to red in view
+            mustardView.ChangeColor(Color.white);
         }
     }
 }

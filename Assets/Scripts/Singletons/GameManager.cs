@@ -8,11 +8,11 @@ public class GameManager : Singleton<GameManager>, IOnBeatEvent
 {
 
     [SerializeField] private GameObject hotDogPrefab;
-    private GameObject _hotDogObj;
-    private GameObject _priorHotDogObj;
+    public GameObject HotDogObj;
+    public GameObject PriorHotDogObj;
     
     public HotDogController CurrentHotDog;
-
+    
     private void Start()
     {
         MusicManager.Instance.OnBeat += OnBeatEvent;
@@ -25,18 +25,18 @@ public class GameManager : Singleton<GameManager>, IOnBeatEvent
         {
             case 4:
                 // first set the old one to the old one spot
-                _priorHotDogObj = _hotDogObj;
+                PriorHotDogObj = HotDogObj;
                 // instantiate new dog
-                _hotDogObj = _hotDogObj = Instantiate(hotDogPrefab); 
-                _hotDogObj.GetComponentInChildren<HotDogView>().transform.SetPositionAndRotation(
+                HotDogObj = Instantiate(hotDogPrefab); 
+                HotDogObj.GetComponentInChildren<HotDogView>().transform.SetPositionAndRotation(
                     new Vector3(-12f, -2, 0), 
                     quaternion.identity);
                 break;
             case 1:
                 // this is erroring for the first one bc there is no reference yet
-                CurrentHotDog = _hotDogObj.GetComponent<HotDogController>();
+                CurrentHotDog = HotDogObj.GetComponent<HotDogController>();
                 // if we are on the first beat, deinstantiate the old one
-                Destroy(_priorHotDogObj);
+                Destroy(PriorHotDogObj);
                 break;
             case 2:
                 break;

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeansController : CondimentController, IOnKey_PEvent
+public class BeansController : CondimentController, IOnKey_PEvent, IOnBarEvent
 {
 
     [SerializeField] private CondimentView beansView;
@@ -11,6 +11,7 @@ public class BeansController : CondimentController, IOnKey_PEvent
     private void Start()
     {
         InputManager.Instance.OnKey_P += OnKey_PEvent;
+        MusicManager.Instance.OnBar += OnBarEvent;
     }
 
     public void OnKey_PEvent(object sender, EventArgs e)
@@ -26,6 +27,21 @@ public class BeansController : CondimentController, IOnKey_PEvent
         {
             //Debug.Log("-- not on beat --");
             beansView.ShakeBottle();
+        }
+    }
+    
+    // on bar event can be moved into parent class perhaps
+    public void OnBarEvent(object sender, EventArgs e)
+    {
+        if (GameManager.Instance.CurrentHotDog.OrderModel.CondimentList["Beans"])
+        {
+            // set color to green in view
+            beansView.ChangeColor(Color.green);
+        }
+        else
+        {
+            //set color to red in view
+            beansView.ChangeColor(Color.white);
         }
     }
 }
