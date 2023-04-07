@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B279EB9A-86B5-038E-8B4C-CD25A68E0AF4}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{35FA8D53-E2C6-9B86-5543-76460C093CE6}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -30,15 +30,20 @@
 					<ShortName>Madeon-Pay-No-Mind-_ft.-Passion-Pit_.wav</ShortName>
 					<CachePath>SFX/Madeon-Pay-No-Mind-_ft.-Passion-Pit__D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="783788202" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>InstantiationMIDI.mid</ShortName>
+					<CachePath>SFX/InstantiationMIDI_508C2B52.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="392151843" Name="PlayMadeon" DurationType="OneShot" DurationMin="251.16528" DurationMax="251.16528">
+				<Event Id="392151843" Name="PlayMadeon" DurationType="OneShot" DurationMin="251.0836" DurationMax="251.0836">
 					<MediaRefs>
 						<MediaRef Id="202786404"/>
+						<MediaRef Id="783788202"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C7027F50-7D29-B325-08B1-2EF926E384A1}</FileHash>
+	<FileHash>{DD3A9944-5238-2725-F2FB-48EC61BD6DA4}</FileHash>
 </SoundBanksInfo>

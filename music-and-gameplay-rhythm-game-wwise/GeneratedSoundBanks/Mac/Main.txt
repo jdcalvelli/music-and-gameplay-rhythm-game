@@ -3,4 +3,5 @@ Event	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	202786404	Madeon-Pay-No-Mind-_ft_-Passion-Pit_	Y:\Desktop\_projects\personal-projects\unity\music-and-gameplay-rhythm-game\music-and-gameplay-rhythm-game-wwise\.cache\Mac\SFX\Madeon-Pay-No-Mind-_ft.-Passion-Pit__D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MadeonTestSong\Madeon-Pay-No-Mind-_ft_-Passion-Pit_		47812400
+	783788202	MIDI	Y:\Desktop\_projects\personal-projects\unity\music-and-gameplay-rhythm-game\music-and-gameplay-rhythm-game-wwise\.cache\Mac\SFX\InstantiationMIDI_508C2B52.wem		\Interactive Music Hierarchy\Default Work Unit\MadeonTestSong\MIDI		62
 

@@ -33,21 +33,29 @@ public class HotDogView : MonoBehaviour
         }
     }
 
+    public void RemoveGlizzyCondiments()
+    {
+        foreach (var condimentBlob in condimentBlobs)
+        {
+            condimentBlob.DOFade(0f, 0f);
+        }
+    }
+
     public void MoveGlizzy(int beatValue)
     {
         switch (beatValue)
         {
             case 1:
-                gameObject.transform.DOMoveX(-6, MusicManager.Instance.BeatDuration / 3);
-                break;
-            case 2:
                 gameObject.transform.DOMoveX(-2, MusicManager.Instance.BeatDuration / 3);
                 break;
-            case 3:
+            case 2:
                 gameObject.transform.DOMoveX(2, MusicManager.Instance.BeatDuration / 3);
                 break;
-            case 4:
+            case 3:
                 gameObject.transform.DOMoveX(6, MusicManager.Instance.BeatDuration / 3);
+                break;
+            case 4:
+                gameObject.transform.DOMoveX(-6, MusicManager.Instance.BeatDuration / 3);
                 break;
         }
     }

@@ -59,7 +59,7 @@
 																		<Property Name="EndTrimOffset" Type="Real64" Value="249022.416666667"/>
 																		<Property Name="FadeInMode" Type="int16" Value="0"/>
 																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																		<Property Name="PlayAt" Type="Real64" Value="2142.85714285714"/>
+																		<Property Name="PlayAt" Type="Real64" Value="2061.18511504037"/>
 																	</PropertyList>
 																	<AudioSourceRef Name="Madeon-Pay-No-Mind-_ft_-Passion-Pit_" ID="{E63B9D92-EB7F-4951-AF30-B1C92931BB60}"/>
 																</MusicClip>
@@ -73,14 +73,23 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicTrack>
-						<MusicTrack Name="InstantiateGlizzy" ID="{D49FC3AA-F5CF-4B5C-BCB0-BF7DB4BA85B5}" ShortID="1042372037">
+						<MusicTrack Name="MIDI" ID="{AA489D7F-C2F4-4F1C-986D-E9FA538C9E9E}" ShortID="775334351">
 							<ReferenceList>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DFFE989-AA29-4423-AA16-D615F27A2D75}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<MidiFileSource Name="InstantiationMIDI" ID="{BDFEB2A4-D19F-4842-9A88-57BCAF2C4B03}" ShortID="31702462">
+									<Language>SFX</Language>
+									<MidiFile>InstantiationMIDI.mid</MidiFile>
+									<MediaIDList>
+										<MediaID ID="783788202"/>
+									</MediaIDList>
+								</MidiFileSource>
+							</ChildrenList>
 							<TransitionList>
-								<MusicTransition Name="Root" ID="{3E337EFA-E04E-4441-A689-84E5D07E575D}">
+								<MusicTransition Name="Root" ID="{DF7EA0A5-ECC0-4F76-9EDD-8E0E4F45B4B5}">
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
@@ -91,7 +100,22 @@
 								<ObjectList Name="Sequences">
 									<Reference>
 										<Local>
-											<MusicTrackSequence Name="" ID="{A8062108-D9C4-403C-9403-44DF96F3C30C}"/>
+											<MusicTrackSequence Name="" ID="{A8E257BB-B484-4A60-9F56-8944BAF765C6}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<Reference>
+															<Local>
+																<MusicClipMidi Name="InstantiationMIDI" ID="{2FD6EE6B-7BBA-44B6-9BB9-75EAA60602F8}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8571.42857142857"/>
+																	</PropertyList>
+																	<MidiSourceRef Name="InstantiationMIDI" ID="{BDFEB2A4-D19F-4842-9A88-57BCAF2C4B03}"/>
+																</MusicClipMidi>
+															</Local>
+														</Reference>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
 										</Local>
 									</Reference>
 								</ObjectList>
@@ -137,20 +161,9 @@
 							</Reference>
 							<Reference>
 								<Local>
-									<MusicCue Name="InstantiateGlizzy" ID="{0ADA2363-3EBB-49C6-BD32-ED3D6582A56C}">
+									<MusicCue Name="" ID="{5B65EE9B-AA56-46ED-9FB7-382343955B85}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="2"/>
-											<Property Name="TimeMs" Type="Real64" Value="1607.14285714286"/>
-										</PropertyList>
-									</MusicCue>
-								</Local>
-							</Reference>
-							<Reference>
-								<Local>
-									<MusicCue Name="DeinstantiateLastGlizzy" ID="{E12850BF-1113-467C-B1B7-E550229D2E63}">
-										<PropertyList>
-											<Property Name="CueType" Type="int16" Value="2"/>
-											<Property Name="TimeMs" Type="Real64" Value="4285.71428571429"/>
 										</PropertyList>
 									</MusicCue>
 								</Local>

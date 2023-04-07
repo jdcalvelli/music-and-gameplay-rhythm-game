@@ -22,9 +22,6 @@ public class BeatTracker : Singleton<BeatTracker>, IOnBeatEvent, IOnCueEvent
         // subscribe to onbeat event
         MusicManager.Instance.OnBeat += OnBeatEvent;
         MusicManager.Instance.OnCue += OnCueEvent;
-        
-        // initialize beatvalue to 0
-        BeatValue = 0;
     }
 
     public void OnBeatEvent(object sender, EventArgs e)

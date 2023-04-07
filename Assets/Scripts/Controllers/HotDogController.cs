@@ -9,9 +9,12 @@ public class HotDogController : MonoBehaviour, IOnBeatEvent, IOnBarEvent
 
     [SerializeField] private HotDogView hotDogView;
     
+    // super dirty
+    [SerializeField] private SmileDirtyView smileDirtyView;
+    [SerializeField] private FrownDirtyView frownDirtyView;
+    
     public HotDog HotDogModel = new HotDog();
     public Order OrderModel = new Order();
-    
     void Start()
     {
         // subscribe to events
@@ -30,11 +33,28 @@ public class HotDogController : MonoBehaviour, IOnBeatEvent, IOnBarEvent
 
     public void OnBarEvent(object sender, EventArgs e)
     {
-        // just print out the hot dog condiment status
-        //foreach (var condiment in HotDogModel.CondimentList)
-        //{
-        //    Debug.Log(condiment);
-        //}
+        // all of this should move into the game manager logic, but crunch
+        // first check if dictionaries are equal
+        bool dictionariesEqual = 
+            HotDogModel.CondimentList.Keys.Count == OrderModel.CondimentList.Keys.Count &&
+            HotDogModel.CondimentList.Keys.All(k => OrderModel.CondimentList.ContainsKey(k) && 
+                                                    object.Equals(OrderModel.CondimentList[k], 
+                                                        HotDogModel.CondimentList[k]));
+        if (dictionariesEqual)
+        {
+            Debug.Log("order correct!");
+            smileDirtyView.FadeSmile();
+        }
+        else
+        {
+            Debug.Log("order incorrect!");
+            frownDirtyView.FadeFrown();
+        }
+
+        hotDogView.RemoveGlizzyCondiments();
+        HotDogModel = new HotDog();
+        OrderModel = new Order();
+        RandomizeOrder();
     }
     
     public void AddCondiment(string condimentName)
@@ -59,12 +79,5 @@ public class HotDogController : MonoBehaviour, IOnBeatEvent, IOnBarEvent
                     break;
             }
         }
-    }
-
-    private void OnDestroy()
-    {
-        // remove listeners
-        MusicManager.Instance.OnBeat -= OnBeatEvent;
-        MusicManager.Instance.OnBar -= OnBarEvent;
     }
 }
